@@ -1,12 +1,11 @@
 GEM
+  remote: https://rubygems.org/
   specs:
-    docsplit (0.7.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  docsplit
 
 BUNDLED WITH
    1.10.6

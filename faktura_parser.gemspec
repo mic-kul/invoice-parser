@@ -1,4 +1,7 @@
+$:.push File.expand_path("../lib", __FILE__)
+
 Gem::Specification.new do |s|
+
   s.name        = 'faktura_parser'
   s.version     = '0.0.1'
   s.date        = '2015-10-15'
@@ -6,8 +9,10 @@ Gem::Specification.new do |s|
   s.description = "OVH Invoices parser"
   s.authors     = ["Michal Kulesza"]
   s.email       = 'mk@trou.pl'
-  s.files       = ["lib/faktura_parser.rb", 'lib/classifier.rb', 'lib/parser/base_parser.rb', 'lib/parser/ovh_parser.rb']
+  s.files       = `git ls-files`.split("\n")
   s.homepage    =
     'http://gitub.com/mic-kul/faktura_parser'
+s.require_paths = ["lib"]
   s.license       = 'MIT'
+  s.add_runtime_dependency 'docsplit'
 end
