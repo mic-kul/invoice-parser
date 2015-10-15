@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'faktura_gemspec'
+  s.name        = 'faktura_parser'
   s.version     = '0.0.1'
   s.date        = '2015-10-15'
   s.summary     = "Faktura Parser"
