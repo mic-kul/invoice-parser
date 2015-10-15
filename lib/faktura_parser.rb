@@ -1,9 +1,10 @@
 require 'docsplit'
 require 'pathname'
-require './classifier'
-require './parser/base_parser'
-require './parser/ovh_parser'
-class Faktura
+require 'classifier'
+require 'parser/base_parser'
+require 'parser/ovh_parser'
+
+class FakturaParser
   attr_accessor :path
   def initialize(path)
     @path = path
