@@ -7,6 +7,7 @@ require 'parser/play_parser'
 
 class FakturaParser
   attr_accessor :path
+
   def initialize(path)
     @path = path
   end
@@ -20,6 +21,7 @@ class FakturaParser
       pay_until: parser.pay_until,
       document_number: parser.document_number,
       expense_type: parser.expense_type,
+      paid: parser.paid?,
     }
   end
 
