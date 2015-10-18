@@ -3,8 +3,8 @@ $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
 
   s.name        = 'faktura_parser'
-  s.version     = '0.0.1'
-  s.date        = '2015-10-15'
+  s.version     = '0.0.2'
+  s.date        = '2015-10-18'
   s.summary     = "Faktura Parser"
   s.description = "OVH Invoices parser"
   s.authors     = ["Michal Kulesza"]
