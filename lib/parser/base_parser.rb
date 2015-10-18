@@ -24,5 +24,9 @@ module Parser
     def expense_type
       :other
     end
+
+    def paid?
+      false
+    end
   end
 end
