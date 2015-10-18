@@ -25,5 +25,9 @@ module Parser
       m = /Razem brutto\n\n([0-9]+).([0-9]+) PLN\n\nKwota słownie:/.match(text)
       "#{m[1]}.#{m[2]}"
     end
+
+    def paid?
+      true
+    end
   end
 end
