@@ -1,8 +1,11 @@
 class Classifier
   attr_accessor :text
+
+  #Should be generated on run-time
   RULES =
   {
-    /OVH Sp. z o.o./ => 'Ovh'
+    /OVH Sp. z o.o./ => 'Ovh',
+    /P4 Sp. z o.o./ => 'Play',
   }
   def initialize(text)
     @text = text
