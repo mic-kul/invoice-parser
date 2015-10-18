@@ -3,6 +3,7 @@ require 'pathname'
 require 'classifier'
 require 'parser/base_parser'
 require 'parser/ovh_parser'
+require 'parser/play_parser'
 
 class FakturaParser
   attr_accessor :path
@@ -16,7 +17,9 @@ class FakturaParser
       amount_brutto: parser.amount_brutto,
       date: parser.date,
       date_purchase: parser.purchase_date,
+      pay_until: parser.pay_until,
       document_number: parser.document_number,
+      expense_type: parser.expense_type,
     }
   end
 
