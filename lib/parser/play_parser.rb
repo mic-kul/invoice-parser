@@ -11,7 +11,7 @@ module Parser
     end
 
     def nip
-      m = /NIP: ([0-9\-]+)/.match(text)
+      m = /02-677 Warszawa\nNIP: ([0-9\-]+)/.match(text)
       "#{m[1]}".tr('-', '')
     end
 
