@@ -1,7 +1,7 @@
 module Parser
   class PlayParser < BaseParser
     def amount_brutto
-      m = /WARTOŚĆ FAKTURY\n([0-9]+),([0-9]+) zł/.match(text)
+      m = /WARTOŚĆ FAKTURY\s+([0-9]+),([0-9]+) zł/i.match(text)
       "#{m[1]},#{m[2]}"
     end
 
@@ -25,8 +25,8 @@ module Parser
     end
 
     def pay_until
-      m = /Termin płatności\n([0-9]+).([0-9]+).([0-9]+)/.match(text)
-      "#{m[3]}-#{m[2]}-#{m[1]}"
+      m = /(Termin płatności)\s+([0-9]+).([0-9]{2}).([0-9]{4})/i.match(text)
+      "#{m[4]}-#{m[3]}-#{m[2]}"
     end
 
     def expense_type
