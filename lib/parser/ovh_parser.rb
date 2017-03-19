@@ -22,8 +22,9 @@ module Parser
     end
 
     def amount_brutto
-      m = /Razem brutto\n\n([0-9]+).([0-9]+) PLN\n\nKwota słownie:/.match(text)
-      "#{m[1]}.#{m[2]}"
+      m = /Razem brutto\n\n(([0-9]+.[0-9]+ PLN)+)\n\nKwota słownie:/.match(text)
+      m = /^([0-9]+)\.([0-9]+) PLN\s+Kwota słownie/m.match(text) unless m && m.size >= 3
+      return "#{m[1]}.#{m[2]}" if m && m.size >= 3
     end
 
     def paid?
